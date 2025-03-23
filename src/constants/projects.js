@@ -8,7 +8,7 @@ export const projects = [
   },
   {
     title: "Random Color Generator",
-    image: "../../public/random_color_generator.png",
+    image: "/random_color_generator.png",
     description: "A Random Color Generator Using HTML,CSS and Javascript",
     view: "https://subham-web98.github.io/Random_Color_Generator/",
   },
