@@ -39,7 +39,7 @@ const Projects = () => {
             </h3>
             <img
               src={project.image}
-              className="rounded-2xl"
+              className="rounded-2xl object-cover h-40 w-full"
               width={400}
               alt="project_photo"
             />

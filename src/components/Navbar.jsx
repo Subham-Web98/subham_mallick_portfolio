@@ -28,16 +28,16 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                 Home
               </a>
               <a
-                href="#projects"
-                className="hover:text-green-200 text-gray-50 transition-colors"
-              >
-                Projects
-              </a>
-              <a
                 href="#skills"
                 className="hover:text-green-200 text-gray-50 transition-colors"
               >
                 Skills
+              </a>
+              <a
+                href="#projects"
+                className="hover:text-green-200 text-gray-50 transition-colors"
+              >
+                Projects
               </a>
               <a
                 href="#about"

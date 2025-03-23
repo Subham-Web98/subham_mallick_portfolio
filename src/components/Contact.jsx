@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen flex flex-col justify-center items-center mt-20 px-4"
+      className="w-full min-h-screen flex flex-col justify-center items-center pt-20 px-4"
     >
       <h2
         data-aos="fade-up"

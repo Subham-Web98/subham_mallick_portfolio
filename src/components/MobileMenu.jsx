@@ -26,18 +26,18 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         Home
       </a>
       <a
-        href="#projects"
-        onClick={() => setMenuOpen(false)}
-        className="hover:text-green-200 text-gray-50 transition-colors text-2xl"
-      >
-        Projects
-      </a>
-      <a
         href="#skills"
         onClick={() => setMenuOpen(false)}
         className="hover:text-green-200 text-gray-50 transition-colors text-2xl"
       >
         Skills
+      </a>
+      <a
+        href="#projects"
+        onClick={() => setMenuOpen(false)}
+        className="hover:text-green-200 text-gray-50 transition-colors text-2xl"
+      >
+        Projects
       </a>
       <a
         href="#about"
