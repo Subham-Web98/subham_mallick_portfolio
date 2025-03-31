@@ -5,6 +5,7 @@ import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        alert("Message sent successfully");
+        toast.success("Message sent successfully");
         setFormData({
           name: "",
           email: "",
@@ -31,7 +32,7 @@ const Contact = () => {
         });
       })
       .catch(() => {
-        alert("Failed to send the message, please try again");
+        toast.error("Failed to send message");
       });
   };
   useEffect(() => {
@@ -137,6 +138,7 @@ const Contact = () => {
             >
               Submit
             </button>
+            <ToastContainer position="top-right" autoClose={3000} />
           </form>
         </div>
       </div>
