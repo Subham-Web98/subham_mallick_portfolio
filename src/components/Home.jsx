@@ -40,7 +40,7 @@ const Home = () => {
             View Projects
           </a>
           <a
-            href="/MERN STACK.pdf"
+            href="/Subham_Mallick_Web_development.pdf"
             download
             className=" text-white font-bold md:px-16 px-8 py-2 rounded-[50px] hover:-translate-y-1 transition-all duration-200  border-gray-200 border-4 opacity-60 hover:opacity-100  "
           >
