@@ -5,7 +5,8 @@ import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { MdPhoneInTalk } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
+import Swal from "sweetalert2";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,13 @@ const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        toast.success("Message sent successfully");
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "Thank you for contacting me. I'll get back to you soon.",
+          timer: 2500,
+          showConfirmButton: false,
+        });
         setFormData({
           name: "",
           email: "",
@@ -32,15 +39,21 @@ const Contact = () => {
         });
       })
       .catch(() => {
-        toast.error("Failed to send message");
+        Swal.fire({
+          icon: "error",
+          title: "Failed!",
+          text: "Something went wrong. Please try again later.",
+        });
       });
   };
+
   useEffect(() => {
     Aos.init({
       duration: 1000,
       easing: "ease",
     });
   }, []);
+
   return (
     <section
       id="contact"
@@ -59,13 +72,13 @@ const Contact = () => {
 
       <div
         data-aos="fade-up"
-        className="grid grid-cols-1 sm:grid-cols-2   gap-8 max-w-6xl mt-10 justify-around  "
+        className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mt-10 justify-around"
       >
         <div className="flex flex-col gap-y-2">
           <h4 className="md:text-5xl text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-300  to-purple-900">
             Let's Talk ...
           </h4>
-          <p className="text-[12px] font-light max-w-2xl ">
+          <p className="text-[12px] font-light max-w-2xl">
             I am always open to discussing new projects, collaborations, or job
             opportunities. Feel free to reach out if you have any questions or
             just want to connect.
@@ -87,12 +100,9 @@ const Contact = () => {
             <span className="italic">Kolkata - 700082</span>
           </p>
         </div>
+
         <div className="border-[1px] border-blue-400 p-4 rounded-2xl shadow-md shadow-blue-100/30">
-          <form
-            action=""
-            className="flex flex-col gap-y-3"
-            onSubmit={handleSubmit}
-          >
+          <form className="flex flex-col gap-y-3" onSubmit={handleSubmit}>
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -103,7 +113,7 @@ const Contact = () => {
                 setFormData({ ...formData, name: e.target.value })
               }
               placeholder="Enter your name"
-              className="border-[1px] border-blue-300 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-700 transition-all duration-300 focus:bg-gray-800  "
+              className="border-[1px] border-blue-300 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-700 transition-all duration-300 focus:bg-gray-800"
               required
             />
             <label htmlFor="email">Email</label>
@@ -116,7 +126,7 @@ const Contact = () => {
                 setFormData({ ...formData, email: e.target.value })
               }
               placeholder="Enter your email"
-              className="border-[1px] border-blue-300 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-700 transition-all duration-300 focus:bg-gray-800 "
+              className="border-[1px] border-blue-300 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-700 transition-all duration-300 focus:bg-gray-800"
               required
             />
             <label htmlFor="message">Message</label>
@@ -130,15 +140,14 @@ const Contact = () => {
                 setFormData({ ...formData, message: e.target.value })
               }
               placeholder="Enter your message"
-              className="border-[1px] border-blue-300 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-700 transition-all duration-300 focus:bg-gray-800 "
+              className="border-[1px] border-blue-300 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-700 transition-all duration-300 focus:bg-gray-800"
             ></textarea>
             <button
               type="submit"
-              className=" border-2 border-blue-300 rounded-md py-1 hover:-translate-y-0.5 transition-all duration-400 hover:bg-gradient-to-b from-gray-600  to-gray-900 hover:text-green-400 font-semibold font-mono tracking-widest"
+              className="border-2 border-blue-300 rounded-md py-1 hover:-translate-y-0.5 transition-all duration-400 hover:bg-blue-500 hover:text-white font-semibold font-mono tracking-widest"
             >
               Submit
             </button>
-            <ToastContainer position="top-right" autoClose={3000} />
           </form>
         </div>
       </div>
