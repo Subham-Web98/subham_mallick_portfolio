@@ -14,6 +14,7 @@ import { SiMysql } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
+import { FaWordpress } from "react-icons/fa";
 
 const Skills = () => {
   useEffect(() => {
@@ -106,6 +107,9 @@ const Skills = () => {
             </span>
             <span>
               <SiPostman className="text-7xl text-orange-400" />
+            </span>
+            <span>
+              <FaWordpress className="text-6xl text-blue-400" />
             </span>
           </div>
         </div>
