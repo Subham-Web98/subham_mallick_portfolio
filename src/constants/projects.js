@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "CRUD App with MERN Stack",
-    image: "/crud_application.png",
+    image: "/CRUD_app.png",
     description:
       "A CRUD application built with the MERN stack, incorporating UI enhancements using React Toastify, SweetAlert, and Bootstrap.",
     view: "https://crud-application-using-mern-stack.vercel.app/",
