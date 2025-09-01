@@ -36,6 +36,8 @@ const Home = () => {
           <a
             href="https://github.com/Subham-Web98"
             className="bg-gradient-to-b from-green-100 via-green-200 to-green-300 text-black font-bold md:px-16 px-8 py-2 m-0 rounded-[50px] hover:-translate-y-1 transition-all duration-200 "
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>
