@@ -37,6 +37,13 @@ export const projects = [
     view: "https://subham-web98.github.io/Nebula-bootstrap/",
   },
   {
+    title: "Digital Marketing Agency",
+    image: "/Wordpress-project.png",
+    description:
+      "A professional digital marketing agency website inspired by the SEO WP theme using WordPress, Elementor, Astra theme, and WPForms.",
+    view: "https://subham-web98.github.io/Digital-Marketing-Agency-Website/",
+  },
+  {
     title: "Password Generator",
     image: "/password_generator.png",
     description:
